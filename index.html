@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--**********************************************
+* Lohud Traffic Cams was originally developed    *
+* by Dwight R. Worley. It is now maintained by   * 
+* Kai Teoh (@jkteoh), news app developer at      *
+* The Journal News/Lohud.com. Please request     *
+* permission for reuse.                          *
+**************************************************
+-->
+<head>
+<title>Traffic camera and conditions map | Lohud.com | The Journal News</title>
+<meta name="apple-mobile-web-app-title" content="Lower Hudson traffic map | lohud.com"> <!-- sets the bookmark title for iOS -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="keywords" content="traffic cameras,lohud.com,Westchester, Rockland, Putnam,New York,News,local news,headlines,stories,world news" />
+<meta name="description" content="Traffic cameras in Westchester, Rockland, Putnam counties of New York. Lohud.com is the home page of Westchester, Rockland, Putnam New York with in depth and updated Westchester, Rockland, Putnam local news. Stay informed with both Westchester, Rockland, Putnam New York news as well as headlines and stories from around the world." />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<link rel="apple-touch-icon" sizes="200x200" href="lohud_traffic_icon_REV2.png"> <!-- homescreen icon for iOS -->
+<link rel="shortcut icon" sizes="196x196" href="lohud_traffic_icon_REV2.png"> <!-- homescreen icon for Android -->
+<link rel="shortcut icon" href="http://www.gannett-cdn.com/sites/lohud/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
+<link rel="stylesheet" type="text/css" href="css/base.min.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.min.css">
+</head>
+<body onload="initialize()">
+
+  <div id='banner'></div>
+  <script>
+  if(window.self==window.top) {
+    var banner = document.getElementById("banner");
+    banner.style.backgroundColor = "black"; 
+    banner.innerHTML = "<a href='http://www.lohud.com'><img src='http://data.lohud.com/lohud%20logos/site-masthead-logo.png' width='300' /></a><br>";
+  }
+  </script>
+  <div class="row">
+    <div class="large-12 columns head-wrap" id="header">
+      <h2>Lower Hudson Valley Traffic Cameras and Conditions</h2>
+
+      <p>Select <img src='icon46small.png' /> for camera at that location. Updates vary from one to 10 minutes.</p>
+      <p>Flip the switch below to toggle the cameras. Cameras may take a second to load.</p>
+
+      <div class="switch tiny" style="margin: 7px 20px;">
+        <input class="switch-input" id="MapSwitch" type="checkbox" name="MapSwitch">
+        <label class="switch-paddle" for="MapSwitch">
+        </label>
+      </div>
+
+    </div>
+
+    <div class="large-12 columns" id="map-canvas"></div>
+
+    <div class="large-12 columns" style="padding-top:20px;">
+       <p style="font-size: 1em">This map combines real-time traffic conditions from Google and traffic cameras provided by the New York State Thruway Authority, New York State Dept. of Transportation and Westchester County. The color of the traffic conditions is based on the following:<br />
+         <strong>Green:</strong> more than 50 miles per hour or 80 kilometers per hour<br />
+         <strong>Yellow:</strong> 25 - 50 miles per hour or 40 - 80 kilometers per hour<br />
+         <strong>Red:</strong> less than 25 miles per hour or 40 kilometers per hour<br />
+         <strong>Red/Black:</strong> very slow, stop-and-go traffic<br />
+         <strong>Grey:</strong> no data currently available<br />
+      </p>
+    </div>
+  </div>
+  <div class="large-12 columns" id="main-footer">
+      <div id="main-footer-inner">
+      &copy;2015 lohud.com. All rights reserved. Questions or comments? Email <a href="mailto:jteoh@lohud.com">jteoh@lohud.com</a>. Users of this site agree to the <a target="_top" href="http://static.lohud.com/terms/">Terms of Service</a>, <a target="_top" href="http://static.lohud.com/privacy/">Privacy Notice</a>, and <a target="_top" href="http://static.lohud.com/privacy/#adchoices">Ad Choices</a>
+      </div>
+  </div>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2E98Rk8qUdGYsGmC-ifEWeMPBg5bbsMA"></script>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/what-input.min.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/lohudanalytics.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>
